@@ -1,0 +1,20 @@
+function valueOfAString(input) {
+    let [string, command] = input;
+    let sum = 0;
+    if (command === "UPPERCASE") {
+        for (let a = 0; a < string.length; a++) {
+            let num = string[a].charCodeAt();
+            if (num >= 65 && num <= 90) {
+                sum += num;
+            }
+        }
+    } else if (command === "LOWERCASE") {
+        for (let a = 0; a < string.length; a++) {
+            let num = string[a].charCodeAt();
+            if (num >= 97 && num <= 122) {
+                sum += num;
+            }
+        }
+    }
+    console.log(`The total sum is: ${sum}`);
+}
